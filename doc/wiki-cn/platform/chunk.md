@@ -7,7 +7,7 @@ chunk算法的目的是保证redis cluster部署的高可用。chunk算法节点
 同时对chunk的实现有如下约定：
 1. master数量必须为偶数
 2. 可用机器数必须不小于三
-2. 机器节点数不能为3且master数量不能为4
+2. 机器节点数为3时,不允许新建master数量为4的集群
 
 ## chunk 算法go实现
 * 把offer根据节点mem cpu的需求转换成对应的可用资源单元
